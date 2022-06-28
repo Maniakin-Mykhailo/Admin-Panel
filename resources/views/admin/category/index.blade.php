@@ -38,7 +38,7 @@
                                         <th>
                                             Title
                                         </th>
-                                        <th style="width: 15%">
+                                        <th style="width: 30%">
                                         </th>
                                     </tr>
                                     </thead>
@@ -51,8 +51,6 @@
                                             <td>
                                                 {{$category['title']}}
                                             </td>
-                                            <td>
-                                            </td>
                                             <td class="project-actions text-right">
                                                 <a class="btn btn-info btn-sm"
                                                    href="{{route('category.edit', $category['id'])}}">
@@ -60,7 +58,7 @@
                                                     </i>
                                                     Edit
                                                 </a>
-                                                <form action="{{route('category.destroy', $category['id'])}}" method="POST">
+                                                <form action="{{route('category.destroy', $category['id'])}}" method="POST" style="display: inline-block">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm delete-btn" >
@@ -71,8 +69,8 @@
                                                 </form>
                                             </td>
                                         </tr>
-                                    </tbody>
                                     @endforeach
+                                    </tbody>
                                 </table>
                             </div>
                             <!-- /.card-body -->
